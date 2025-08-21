@@ -8,5 +8,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/nbkey/ModuleA.git', :tag => s.version.to_s } # 先这样写，发布时用
   s.ios.deployment_target = '11.0'
   s.source_files = 'Classes/**/*.{h,m}'
-  s.resource_bundles = { 'BaseModule' => ['Resources/**/*'] }
+  s.resource_bundles = { 'ModuleA' => ['Resources/**/*'] }
+  
+  # 声明依赖 BaseModule
+  s.dependency 'BaseModule'
 end
